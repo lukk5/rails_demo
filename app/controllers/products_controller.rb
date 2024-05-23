@@ -23,6 +23,8 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
 
+    puts @product.inspect
+
     respond_to do |format|
       if @product.save
         format.html { redirect_to product_url(@product), notice: "Product was successfully created." }
