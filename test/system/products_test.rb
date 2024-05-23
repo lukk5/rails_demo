@@ -15,7 +15,7 @@ class ProductsTest < ApplicationSystemTestCase
     click_on "New product"
 
     fill_in "Description", with: @product.description
-    fill_in "Image irl", with: @product.image_irl
+    fill_in "Image irl", with: @product.image_url
     fill_in "Price", with: @product.price
     fill_in "Title", with: @product.title
     click_on "Create Product"
@@ -29,7 +29,7 @@ class ProductsTest < ApplicationSystemTestCase
     click_on "Edit this product", match: :first
 
     fill_in "Description", with: @product.description
-    fill_in "Image irl", with: @product.image_irl
+    fill_in "Image irl", with: @product.image_url
     fill_in "Price", with: @product.price
     fill_in "Title", with: @product.title
     click_on "Update Product"
